@@ -624,7 +624,7 @@ def qr_destroy(la):
     because the memory used in `la[0]` is reclaimed earlier.
     """
     a = np.asfortranarray(la[0])
-    del la[0], la  # now `a` is the only reference to the input matrix
+    #del la[0], la  # now `a` is the only reference to the input matrix
     m, n = a.shape
     # perform q, r = QR(a); code hacked out of scipy.linalg.qr
     logger.debug("computing QR of %s dense matrix", str(a.shape))

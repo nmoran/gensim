@@ -182,7 +182,7 @@ class Projection(utils.SaveLoad):
 
         other.u = [other.u]  # do some reference magic and call qr_destroy, to save RAM
         q, r = matutils.qr_destroy(other.u)  # q, r = QR(component)
-        assert not other.u
+        #assert not other.u
 
         # find the rotation that diagonalizes r
         k = np.bmat([
